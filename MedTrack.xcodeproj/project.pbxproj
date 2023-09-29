@@ -22,6 +22,7 @@
 		1779C8BA2AC6DA300013B44B /* TraitementRappel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779C8B82AC6DA300013B44B /* TraitementRappel.swift */; };
 		1779C8BC2AC6DA340013B44B /* medicament.sql in Resources */ = {isa = PBXBuildFile; fileRef = 1779C8BB2AC6DA340013B44B /* medicament.sql */; };
 		1779C8BF2AC6DA410013B44B /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 1779C8BE2AC6DA410013B44B /* SQLite */; };
+		1779C8DB2AC6DE1E0013B44B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1779C8DA2AC6DE1E0013B44B /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		1779C8B72AC6DA300013B44B /* IndexRappel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexRappel.swift; sourceTree = "<group>"; };
 		1779C8B82AC6DA300013B44B /* TraitementRappel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitementRappel.swift; sourceTree = "<group>"; };
 		1779C8BB2AC6DA340013B44B /* medicament.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = medicament.sql; sourceTree = "<group>"; };
+		1779C8DA2AC6DE1E0013B44B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../../../../../Users/angelo/Downloads/.gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				1779C8932AC6D8C10013B44B /* ContentView.swift */,
 				1779C8952AC6D8C20013B44B /* Assets.xcassets */,
 				1779C8972AC6D8C20013B44B /* Preview Content */,
+				1779C8DA2AC6DE1E0013B44B /* .gitignore */,
 			);
 			path = MedTrack;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1779C8DB2AC6DE1E0013B44B /* .gitignore in Resources */,
 				1779C8992AC6D8C20013B44B /* Preview Assets.xcassets in Resources */,
 				1779C8962AC6D8C20013B44B /* Assets.xcassets in Resources */,
 				1779C8BC2AC6DA340013B44B /* medicament.sql in Resources */,
