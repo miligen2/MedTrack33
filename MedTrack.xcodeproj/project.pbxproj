@@ -11,6 +11,17 @@
 		1779C8942AC6D8C10013B44B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779C8932AC6D8C10013B44B /* ContentView.swift */; };
 		1779C8962AC6D8C20013B44B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1779C8952AC6D8C20013B44B /* Assets.xcassets */; };
 		1779C8992AC6D8C20013B44B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1779C8982AC6D8C20013B44B /* Preview Assets.xcassets */; };
+		1779C8AA2AC6D9EE0013B44B /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779C8A22AC6D9EE0013B44B /* Calendar.swift */; };
+		1779C8AB2AC6D9EE0013B44B /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779C8A42AC6D9EE0013B44B /* Index.swift */; };
+		1779C8AC2AC6D9EE0013B44B /* ProgrammationMed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779C8A72AC6D9EE0013B44B /* ProgrammationMed.swift */; };
+		1779C8AD2AC6D9EE0013B44B /* ProgrammationMedSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779C8A82AC6D9EE0013B44B /* ProgrammationMedSecondView.swift */; };
+		1779C8AE2AC6D9EE0013B44B /* Traitement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779C8A92AC6D9EE0013B44B /* Traitement.swift */; };
+		1779C8B12AC6DA1B0013B44B /* ModalMedicament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779C8B02AC6DA1B0013B44B /* ModalMedicament.swift */; };
+		1779C8B42AC6DA220013B44B /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779C8B32AC6DA220013B44B /* DB.swift */; };
+		1779C8B92AC6DA300013B44B /* IndexRappel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779C8B72AC6DA300013B44B /* IndexRappel.swift */; };
+		1779C8BA2AC6DA300013B44B /* TraitementRappel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1779C8B82AC6DA300013B44B /* TraitementRappel.swift */; };
+		1779C8BC2AC6DA340013B44B /* medicament.sql in Resources */ = {isa = PBXBuildFile; fileRef = 1779C8BB2AC6DA340013B44B /* medicament.sql */; };
+		1779C8BF2AC6DA410013B44B /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 1779C8BE2AC6DA410013B44B /* SQLite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +30,16 @@
 		1779C8932AC6D8C10013B44B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1779C8952AC6D8C20013B44B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1779C8982AC6D8C20013B44B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1779C8A22AC6D9EE0013B44B /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		1779C8A42AC6D9EE0013B44B /* Index.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Index.swift; sourceTree = "<group>"; };
+		1779C8A72AC6D9EE0013B44B /* ProgrammationMed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammationMed.swift; sourceTree = "<group>"; };
+		1779C8A82AC6D9EE0013B44B /* ProgrammationMedSecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammationMedSecondView.swift; sourceTree = "<group>"; };
+		1779C8A92AC6D9EE0013B44B /* Traitement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Traitement.swift; sourceTree = "<group>"; };
+		1779C8B02AC6DA1B0013B44B /* ModalMedicament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalMedicament.swift; sourceTree = "<group>"; };
+		1779C8B32AC6DA220013B44B /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
+		1779C8B72AC6DA300013B44B /* IndexRappel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexRappel.swift; sourceTree = "<group>"; };
+		1779C8B82AC6DA300013B44B /* TraitementRappel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitementRappel.swift; sourceTree = "<group>"; };
+		1779C8BB2AC6DA340013B44B /* medicament.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = medicament.sql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1779C8BF2AC6DA410013B44B /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +73,11 @@
 		1779C8902AC6D8C10013B44B /* MedTrack */ = {
 			isa = PBXGroup;
 			children = (
+				1779C8BB2AC6DA340013B44B /* medicament.sql */,
+				1779C8B52AC6DA300013B44B /* Composant */,
+				1779C8B22AC6DA220013B44B /* DB */,
+				1779C8AF2AC6DA1B0013B44B /* Modal */,
+				1779C8A02AC6D9EE0013B44B /* View */,
 				1779C8912AC6D8C10013B44B /* MedTrackApp.swift */,
 				1779C8932AC6D8C10013B44B /* ContentView.swift */,
 				1779C8952AC6D8C20013B44B /* Assets.xcassets */,
@@ -65,6 +92,83 @@
 				1779C8982AC6D8C20013B44B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1779C8A02AC6D9EE0013B44B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1779C8A12AC6D9EE0013B44B /* Calendar */,
+				1779C8A32AC6D9EE0013B44B /* Index */,
+				1779C8A52AC6D9EE0013B44B /* Traitement */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1779C8A12AC6D9EE0013B44B /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				1779C8A22AC6D9EE0013B44B /* Calendar.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		1779C8A32AC6D9EE0013B44B /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				1779C8A42AC6D9EE0013B44B /* Index.swift */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		1779C8A52AC6D9EE0013B44B /* Traitement */ = {
+			isa = PBXGroup;
+			children = (
+				1779C8A62AC6D9EE0013B44B /* Rappel */,
+				1779C8A92AC6D9EE0013B44B /* Traitement.swift */,
+			);
+			path = Traitement;
+			sourceTree = "<group>";
+		};
+		1779C8A62AC6D9EE0013B44B /* Rappel */ = {
+			isa = PBXGroup;
+			children = (
+				1779C8A72AC6D9EE0013B44B /* ProgrammationMed.swift */,
+				1779C8A82AC6D9EE0013B44B /* ProgrammationMedSecondView.swift */,
+			);
+			path = Rappel;
+			sourceTree = "<group>";
+		};
+		1779C8AF2AC6DA1B0013B44B /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				1779C8B02AC6DA1B0013B44B /* ModalMedicament.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		1779C8B22AC6DA220013B44B /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				1779C8B32AC6DA220013B44B /* DB.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		1779C8B52AC6DA300013B44B /* Composant */ = {
+			isa = PBXGroup;
+			children = (
+				1779C8B62AC6DA300013B44B /* Index */,
+			);
+			path = Composant;
+			sourceTree = "<group>";
+		};
+		1779C8B62AC6DA300013B44B /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				1779C8B72AC6DA300013B44B /* IndexRappel.swift */,
+				1779C8B82AC6DA300013B44B /* TraitementRappel.swift */,
+			);
+			path = Index;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +187,9 @@
 			dependencies = (
 			);
 			name = MedTrack;
+			packageProductDependencies = (
+				1779C8BE2AC6DA410013B44B /* SQLite */,
+			);
 			productName = MedTrack;
 			productReference = 1779C88E2AC6D8C10013B44B /* MedTrack.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +218,9 @@
 				Base,
 			);
 			mainGroup = 1779C8852AC6D8C00013B44B;
+			packageReferences = (
+				1779C8BD2AC6DA410013B44B /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 1779C88F2AC6D8C10013B44B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +237,7 @@
 			files = (
 				1779C8992AC6D8C20013B44B /* Preview Assets.xcassets in Resources */,
 				1779C8962AC6D8C20013B44B /* Assets.xcassets in Resources */,
+				1779C8BC2AC6DA340013B44B /* medicament.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +248,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1779C8AE2AC6D9EE0013B44B /* Traitement.swift in Sources */,
+				1779C8AC2AC6D9EE0013B44B /* ProgrammationMed.swift in Sources */,
+				1779C8B92AC6DA300013B44B /* IndexRappel.swift in Sources */,
+				1779C8B42AC6DA220013B44B /* DB.swift in Sources */,
 				1779C8942AC6D8C10013B44B /* ContentView.swift in Sources */,
+				1779C8AD2AC6D9EE0013B44B /* ProgrammationMedSecondView.swift in Sources */,
+				1779C8B12AC6DA1B0013B44B /* ModalMedicament.swift in Sources */,
+				1779C8AA2AC6D9EE0013B44B /* Calendar.swift in Sources */,
+				1779C8AB2AC6D9EE0013B44B /* Index.swift in Sources */,
 				1779C8922AC6D8C10013B44B /* MedTrackApp.swift in Sources */,
+				1779C8BA2AC6DA300013B44B /* TraitementRappel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +464,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1779C8BD2AC6DA410013B44B /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1779C8BE2AC6DA410013B44B /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1779C8BD2AC6DA410013B44B /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1779C8862AC6D8C00013B44B /* Project object */;
 }
