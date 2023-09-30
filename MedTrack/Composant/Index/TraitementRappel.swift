@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct TraitementRappel: View {
-    var medicamentProgramme = ["test","t"]
+
+
+    @State var rappelNombreComprimé: [PillDataInBox]
+    @Binding var isLinkActive: Bool
+    var db = DataManagerMedicament()
+    
     var body: some View {
+        VStack{
         List{
-            ForEach(medicamentProgramme, id: \.self) { listMedicament in
+            ForEach(rappelNombreComprimé, id: \.id) { rappel in
                 Section{
                     VStack {
                         HStack {
@@ -19,7 +25,7 @@ struct TraitementRappel: View {
                                 .font(.title)
                                 .foregroundColor(.green)
                             
-                            Text(listMedicament)
+                            Text("Nom du medicament")
                                 .font(.title)
                                 .fontWeight(.bold)
                             
@@ -34,7 +40,7 @@ struct TraitementRappel: View {
                         
                         HStack{
                             // nombre de comprimé dans la boite de medicament
-                            Text("Il reste 1 Comprimé(s)")
+                            Text("Il reste \(rappel.nombreDeComprimesDansBoite) Comprimé(s)")
                                 .frame(width: 200.0, height: 34.0)
                                 .font(.headline)
                                 .background(.gray.opacity(0.5))
@@ -44,21 +50,34 @@ struct TraitementRappel: View {
                             Image(systemName: "bell").font(.title).foregroundColor(.green)
                             
                         }
-        
+                        
                         
                     }.padding(1.0)
                 }
-                }.frame(width:310, height: 150.0)
+            }.frame(width:310, height: 150.0)
             
-                
+            
         }
+            Button {
+                self.isLinkActive = true
+                db.creatTable()
+            } label: {
+                Text("Ajouter un rappel")
+                    .padding()
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(50)
+            }.navigationDestination(isPresented: $isLinkActive) {
+                addMedicament()
+            }
+    }
         
         }
     }
 
-struct TraitementRappel_Previews: PreviewProvider {
-    static var previews: some View {
-        TraitementRappel()
-    }
-}
+//struct TraitementRappel_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TraitementRappel()
+//    }
+//}
 

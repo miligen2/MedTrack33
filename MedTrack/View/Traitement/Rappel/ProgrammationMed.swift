@@ -22,7 +22,7 @@ struct ProgrammationMed: View {
     
     @Binding var selectedMedicament: Medicament?
     
-    var databaseManager = DatabaseManager()
+    var databaseManager = DataManagerMedicament()
     
     
     var body: some View {

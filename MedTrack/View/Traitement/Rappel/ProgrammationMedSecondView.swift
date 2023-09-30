@@ -26,7 +26,7 @@ struct ProgrammationMedSecondView: View {
     @State private var vibrateOnRing = true
     
     @State private var saveRappel = true
-    var databaseManager = DatabaseManager()
+    var databaseManager = DataManagerMedicament()
     
     var body: some View {
         NavigationView{

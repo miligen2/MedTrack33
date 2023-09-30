@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct IndexRappel: View {
-    var medicamentProgramme = ["oui","test","ok"]
     
+    @Binding var pillDataArray: [PillData]
     
     var body: some View {
         
         List{
-            ForEach(medicamentProgramme, id: \.self) { listMedicament in
+            ForEach(pillDataArray, id: \.id) { pillData in
                 Section{
                     VStack {
                         HStack{
-                            Text("8h00")
+                            Text(pillData.heureDePrise1)
                                 .font(.headline)
                             Spacer()
                         }
@@ -27,7 +27,7 @@ struct IndexRappel: View {
                                 .font(.title)
                                 .foregroundColor(Color.accentColor)
                             
-                            Text(listMedicament)
+                            Text("nom du medicament")
                                 .font(.title)
                                 .fontWeight(.bold)
                             
@@ -38,7 +38,8 @@ struct IndexRappel: View {
                         
                         
                         
-                        HStack{Text("1 Comprimé(s)")
+                        HStack{
+                            Text("\(pillData.nombreDeComprimes)")
                             .font(.headline)
                             Spacer()
                         }.padding(.leading)
@@ -83,6 +84,10 @@ struct IndexRappel: View {
 
 struct IndexRappel_Previews: PreviewProvider {
     static var previews: some View {
-        IndexRappel()
+        let testData: [PillData] = [
+                   PillData(id: 1, nombreDeFoisParJour: 2, heureDePrise1: "1", heureDePrise2: "1", heureDePrise3: "1", nombreDeComprimes: 4)
+                   // Ajoutez d'autres données fictives ici si nécessaire
+               ]
+        IndexRappel( pillDataArray: .constant(testData))
     }
 }

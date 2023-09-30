@@ -15,13 +15,16 @@ struct Traitement: View {
     
     @State var isLinkActive = false
     
+    var db = DataManagerMedicament()
+    
+    @State public var pillDataArray: [PillDataInBox] = []
+    
     
     var body: some View {
         NavigationStack {
             ZStack{
-                
                 VStack {
-                    if medicamentProgramme.isEmpty {
+                    if pillDataArray.isEmpty {
                         Text("Commençons !")
                             .font(.title2)
                             .fontWeight(.medium)
@@ -37,6 +40,7 @@ struct Traitement: View {
                         
                         Button {
                             self.isLinkActive = true
+                            db.creatTable()
                         } label: {
                             Text("Ajouter un rappel")
                                 .padding()
@@ -50,18 +54,15 @@ struct Traitement: View {
                         
                         
                     } else {
-                        TraitementRappel()
+                        TraitementRappel(rappelNombreComprimé: pillDataArray, isLinkActive: $isLinkActive)
                     }
                 }
-                VStack{
-                    HStack{
-                        Text("Traitement")
-                            .font(.title)
-                            .fontWeight(.bold)
-                        Spacer()
-                    }
-                    Spacer()
-                }.padding()
+            }.onAppear(){
+                do {
+                    pillDataArray = try db.displayDFTRappel()
+                    } catch{
+                    print("ok")
+                }
             }
         }
         

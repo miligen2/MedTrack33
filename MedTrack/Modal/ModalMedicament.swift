@@ -5,11 +5,16 @@ struct Medicament:Identifiable,Hashable {
     let name : String
 }
 
-struct StoredData{
+struct PillData {
+    let id: Int
     let nombreDeFoisParJour: Int
-    let heureDePrise: Date
-    let heureDePrise2: Date
-    let heureDePrise3: Date
+    let heureDePrise1: String
+    let heureDePrise2: String
+    let heureDePrise3: String
     let nombreDeComprimes: Int
 }
-
+struct PillDataInBox {
+    let id: Int
+    let nombreDeComprimesDansBoite: Int
+    let rappelComprimes: Int
+}

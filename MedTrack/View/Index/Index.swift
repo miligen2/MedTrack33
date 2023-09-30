@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct Index: View {
+    
+    var db = DataManagerMedicament()
+    
     @State var button = false
-    @State var medicamentProgramme = [2]
-
+    @State public var pillDataArray: [PillData] = []
     
     var body: some View {
         ZStack {
             VStack {
-                if medicamentProgramme.isEmpty {
+                if pillDataArray.isEmpty {
                     VStack {
                         Text("Visualisez vos traitement")
                             .font(.title2)
@@ -29,18 +31,15 @@ struct Index: View {
                     }
                     .padding(.top, 50)
                 } else {
-                    IndexRappel()
+                    IndexRappel(pillDataArray: $pillDataArray)
                 }
             }
-            VStack{
-                HStack{
-                    Text("À prendre 💊")
-                        .font(.title)
-                        .fontWeight(.bold)
-                    Spacer()
-                }
-                Spacer()
-            }.padding()
+        }.onAppear(){
+            do {
+                pillDataArray = try db.displayDataFromTable()
+            } catch{
+                print("ok")
+            }
         }
     }
 }
