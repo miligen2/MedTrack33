@@ -23,6 +23,8 @@
 		1779C8BC2AC6DA340013B44B /* medicament.sql in Resources */ = {isa = PBXBuildFile; fileRef = 1779C8BB2AC6DA340013B44B /* medicament.sql */; };
 		1779C8BF2AC6DA410013B44B /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 1779C8BE2AC6DA410013B44B /* SQLite */; };
 		1779C8DB2AC6DE1E0013B44B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1779C8DA2AC6DE1E0013B44B /* .gitignore */; };
+		17972DB12AC86F09003F22AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17972DB02AC86F09003F22AA /* AppDelegate.swift */; };
+		17972DB42AC87098003F22AA /* NotificationRappel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17972DB32AC87098003F22AA /* NotificationRappel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		1779C8B82AC6DA300013B44B /* TraitementRappel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitementRappel.swift; sourceTree = "<group>"; };
 		1779C8BB2AC6DA340013B44B /* medicament.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = medicament.sql; sourceTree = "<group>"; };
 		1779C8DA2AC6DE1E0013B44B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../../../../../Users/angelo/Downloads/.gitignore; sourceTree = "<group>"; };
+		17972DB02AC86F09003F22AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17972DB32AC87098003F22AA /* NotificationRappel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRappel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 		1779C8902AC6D8C10013B44B /* MedTrack */ = {
 			isa = PBXGroup;
 			children = (
+				17972DB22AC87082003F22AA /* Notification */,
+				17972DAE2AC86EDD003F22AA /* AppDelegate */,
 				1779C8BB2AC6DA340013B44B /* medicament.sql */,
 				1779C8B52AC6DA300013B44B /* Composant */,
 				1779C8B22AC6DA220013B44B /* DB */,
@@ -174,6 +180,22 @@
 			path = Index;
 			sourceTree = "<group>";
 		};
+		17972DAE2AC86EDD003F22AA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				17972DB02AC86F09003F22AA /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		17972DB22AC87082003F22AA /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				17972DB32AC87098003F22AA /* NotificationRappel.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,6 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17972DB12AC86F09003F22AA /* AppDelegate.swift in Sources */,
+				17972DB42AC87098003F22AA /* NotificationRappel.swift in Sources */,
 				1779C8AE2AC6D9EE0013B44B /* Traitement.swift in Sources */,
 				1779C8AC2AC6D9EE0013B44B /* ProgrammationMed.swift in Sources */,
 				1779C8B92AC6DA300013B44B /* IndexRappel.swift in Sources */,

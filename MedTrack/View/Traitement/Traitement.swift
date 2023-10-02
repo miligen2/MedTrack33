@@ -15,9 +15,11 @@ struct Traitement: View {
     
     @State var isLinkActive = false
     
+    @State var isLinkActiveforP2 = false
+    
     var db = DataManagerMedicament()
     
-    @State public var pillDataArray: [PillDataInBox] = []
+    @State public var pillDataArray: [PillData] = []
     
     
     var body: some View {
@@ -40,6 +42,8 @@ struct Traitement: View {
                         
                         Button {
                             self.isLinkActive = true
+                            self.isLinkActiveforP2 = true
+                            
                             db.creatTable()
                         } label: {
                             Text("Ajouter un rappel")
@@ -59,7 +63,7 @@ struct Traitement: View {
                 }
             }.onAppear(){
                 do {
-                    pillDataArray = try db.displayDFTRappel()
+                    pillDataArray = try db.displayDataFromTable()
                     } catch{
                     print("ok")
                 }
@@ -84,7 +88,7 @@ struct addMedicament: View {
     var dbM = DataManagerMedicament()
     
     @State private var searchText = ""
-    @State private var selectedMedicament: Medicament? = nil
+    @State private var selectedMedicament: String? 
     
     var searchResults: [Medicament] {
         if searchText.isEmpty {
@@ -104,6 +108,9 @@ struct addMedicament: View {
                             Image(systemName: "pill").foregroundColor(Color(hue: 0.313, saturation: 0.957, brightness: 0.627))
                             Text(medicament.name).font(.footnote)
                         }
+                    }
+                    .onTapGesture {
+                        selectedMedicament = medicament.name
                     }
                 }
             }.listStyle(.plain).searchable(text: $searchText,placement: .navigationBarDrawer(displayMode: .always), prompt: "Rechercher un médicament")

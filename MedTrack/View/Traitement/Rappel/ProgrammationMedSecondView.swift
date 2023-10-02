@@ -9,7 +9,16 @@ import SwiftUI
 
 struct ProgrammationMedSecondView: View {
     
+    
+    
     @Environment(\.presentationMode) var presentationMode
+    
+    var nomDuMedicament: String
+    var nombreDeFoisParJour: Int
+    var heureDePrise: Date
+    var heureDePrise2: Date
+    var heureDePrise3: Date
+    var nombreDeComprimes: Int
     
     
     @State private var remindMe = true
@@ -97,13 +106,7 @@ struct ProgrammationMedSecondView: View {
                 ProgressView(value: 0.75).padding(20)
                 
                 Button(action: {
-                    if remindMe{
                         saveDataToDatabase()
-                    }else{
-                        presentationMode.wrappedValue.dismiss()
-                        presentationMode.wrappedValue.dismiss()
-
-                    }
                 }, label:  {
                     Text("Enregistrer").padding(.horizontal, 120.0).padding(.vertical).background(Color.accentColor).cornerRadius(10)
                         .fontWeight(.black)
@@ -122,7 +125,7 @@ struct ProgrammationMedSecondView: View {
         do {
             
             // Enregistrer les données dans lta base de données
-            try databaseManager.saveDataPill(nombreDeComprimesDansBoite: nombreDeComprimesDansBoite, rappelComprimes: rappelComprimes)
+            try databaseManager.saveDataTakePill(nomDuMedicament: nomDuMedicament, nombreDeFoisParJour: nombreDeFoisParJour, heureDePrise: heureDePrise, heureDePrise2: heureDePrise2, heureDePrise3: heureDePrise3, nombreDeComprimes: nombreDeComprimes, nombreDeComprimesDansBoite: nombreDeComprimesDansBoite, rappelComprimes: rappelComprimes)
             
             
             
@@ -137,8 +140,8 @@ struct ProgrammationMedSecondView: View {
 
 
 
-struct ProgrammationMedSecondView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProgrammationMedSecondView()
-    }
-}
+//struct ProgrammationMedSecondView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProgrammationMedSecondView()
+//    }
+//}

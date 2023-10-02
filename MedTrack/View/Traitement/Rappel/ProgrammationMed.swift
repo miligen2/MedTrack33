@@ -20,7 +20,7 @@ struct ProgrammationMed: View {
     
     @State var isPresented = false
     
-    @Binding var selectedMedicament: Medicament?
+    @Binding var selectedMedicament: String?
     
     var databaseManager = DataManagerMedicament()
     
@@ -41,6 +41,8 @@ struct ProgrammationMed: View {
                 
                 Text("À quelle fréquence prenez-vous ce médicament ?").font(.title2)
                     .fontWeight(.medium)
+                
+                Text("\(selectedMedicament ?? "")")
                 
                 HStack{
                     Text("Nombre de fois par jour")
@@ -98,13 +100,13 @@ struct ProgrammationMed: View {
                 
                 Button(action: {
                     self.isPresented = true
-                    saveDataToDatabase()
+                        //      saveDataToDatabase()
                 }, label: {
                     Text("Suivant").padding(.horizontal, 120.0).padding(.vertical).background(Color.accentColor).cornerRadius(10)
                         .fontWeight(.black)
                         .foregroundColor(Color.white)
                 }).navigationDestination(isPresented: $isPresented) {
-                    ProgrammationMedSecondView()
+                    ProgrammationMedSecondView(nomDuMedicament: selectedMedicament ?? "", nombreDeFoisParJour: self.nombreDeFoisParJour, heureDePrise: self.heureDePrise, heureDePrise2: self.heureDePrise2, heureDePrise3: self.heureDePrise3, nombreDeComprimes: self.nombreDeComprimes)
                 }
                 
                 
@@ -118,19 +120,6 @@ struct ProgrammationMed: View {
     }
     
     
-    private func saveDataToDatabase() {
-        do {
-            
-            // Enregistrer les données dans lta base de données
-            try databaseManager.saveDataTakePill(nombreDeFoisParJour: nombreDeFoisParJour, heureDePrise: heureDePrise, heureDePrise2: heureDePrise2, heureDePrise3: heureDePrise3, nombreDeComprimes: nombreDeComprimes)
-      
-            
-            
-            // Mettre à jour l'interface utilisateur ou effectuer d'autres actions si nécessaire
-        } catch {
-            print("Erreur lors de l'enregistrement des données dans la base de données : \(error)")
-        }
-    }
 }
 
 
@@ -138,10 +127,10 @@ struct ProgrammationMed: View {
 struct ProgrammationMed_Previews: PreviewProvider {
     static var previews: some View {
         
-        var medicament = Medicament(id: 1, name: "Lol" )
+        var medicament = "t"
 
         
-        let binding = Binding<Medicament?>(
+        let binding = Binding<String?>(
                  get: { medicament },
                  set: { newValue in medicament = newValue! }
              )
